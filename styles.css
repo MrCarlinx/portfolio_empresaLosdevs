@@ -502,6 +502,7 @@ textarea.form-input {
   height: 630px;
   display: flex;
   position: static;
+
 }
 
 /* ===== TABLET STYLES (768px and up) ===== */
@@ -1131,7 +1132,6 @@ textarea.form-input {
   }
 
   .nav-toggle.active span:nth-child(1) {
-    
     transform: rotate(45deg) translate(5px, 5px);
   }
 
