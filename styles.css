@@ -616,8 +616,15 @@ textarea.form-input {
 
 /* ===== LARGE DESKTOP STYLES (1200px and up) ===== */
 @media (min-width: 1200px) {
+  .w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
   .container {
-    max-width: 1400px;
+    max-width: 1800px;
   }
   
   .hero-title {

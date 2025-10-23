@@ -4952,7 +4952,7 @@ img {
   z-index: 1;
   max-width: 650px;
   max-height: 500px;
-  margin-left: auto;
+  margin-left: 200px;
   margin-right: auto;
   position: absolute;
   padding-top: 200px;
