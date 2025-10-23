@@ -241,7 +241,7 @@ textarea.form-input {
 }
 
 .single-counter-card {
-  background: white;
+  background-color: rgb(0, 0, 0);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -250,14 +250,14 @@ textarea.form-input {
 
 .counter-details {
   font-size: 0.9rem;
-  color: #666;
+  color: #bcb1b1;
   margin-bottom: 15px;
 }
 
 .counter-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #bcb1b1;
 }
 
 /* Hide 3D element on mobile */
@@ -588,7 +588,7 @@ textarea.form-input {
 /* ===== PRESTADORES SECTION ===== */
 .prestadores-section {
   padding: 80px 0px;
-  background: #f8f9fa;
+  background: #000000;
 }
 
 .section-title {
@@ -757,6 +757,7 @@ textarea.form-input {
   }
 
   .nav-toggle.active span:nth-child(1) {
+    
     transform: rotate(45deg) translate(5px, 5px);
   }
 
@@ -766,6 +767,7 @@ textarea.form-input {
 
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+    
   }
 }
 
@@ -778,7 +780,8 @@ textarea.form-input {
   
   .section-title {
     font-size: 3rem;
-  }
+    color: whitesmoke;
+     }
 }
 
 @media (min-width: 992px) {
