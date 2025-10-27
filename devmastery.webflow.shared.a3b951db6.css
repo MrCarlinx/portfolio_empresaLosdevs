@@ -101,7 +101,7 @@ button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 5px;
-  background: rgb(107, 98, 182);
+  background: rgb(29, 13, 166);
   border-radius: 5%;
   padding: 12px 20px;
   font-size: 18px;
@@ -227,6 +227,7 @@ html {
 body {
   color: #333;
   background-color: #080808;
+  background-color: #000000;
   min-height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -4241,6 +4242,7 @@ img {
 }
 
 .single-counter-card {
+  background: #080808;
   grid-column-gap: 100px;
   grid-row-gap: 100px;
   border-top: 1px solid var(--border);
@@ -4250,6 +4252,7 @@ img {
 }
 
 .single-counter-card.last {
+  background: #0000;
   border-bottom: 1px solid var(--border);
 }
 
