@@ -259,20 +259,56 @@
                 <div class="projects-wrap">
                     <button class="projects-btn prev" aria-label="Anterior">&#10094;</button>
                     <div class="projects-carousel" tabindex="0">
-                        <!-- Exemplos: troque as imagens pelos seus projetos -->
-                        <div class="project-card"><img src="print1.png"
-                                alt="Projeto 1"></div>
-                        <div class="project-card"><img src="https://via.placeholder.com/420x260?text=Projeto+2"
-                                alt="Projeto 2"></div>
-                        <div class="project-card"><img src="https://via.placeholder.com/420x260?text=Projeto+3"
-                                alt="Projeto 3"></div>
-                        <div class="project-card"><img src="https://via.placeholder.com/420x260?text=Projeto+4"
-                                alt="Projeto 4"></div>
-                        <div class="project-card"><img src="https://via.placeholder.com/420x260?text=Projeto+5"
-                                alt="Projeto 5"></div>
+                        <!-- Cards de projeto com links -->
+                        <div class="project-card">
+                            <a href="https://www.google.com" target="_blank" class="project-link">
+                                <img src="print1.png" alt="Projeto 1">
+                                <div class="project-overlay">
+                                    <h3>Sistema Web</h3>
+                                    <p>Clique para visitar</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="https://www.microsoft.com" target="_blank" class="project-link">
+                                <img src="https://via.placeholder.com/420x260?text=Projeto+2" alt="Projeto 2">
+                                <div class="project-overlay">
+                                    <h3>App Mobile</h3>
+                                    <p>Clique para visitar</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="https://www.apple.com" target="_blank" class="project-link">
+                                <img src="https://via.placeholder.com/420x260?text=Projeto+3" alt="Projeto 3">
+                                <div class="project-overlay">
+                                    <h3>E-commerce</h3>
+                                    <p>Clique para visitar</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="https://www.amazon.com" target="_blank" class="project-link">
+                                <img src="https://via.placeholder.com/420x260?text=Projeto+4" alt="Projeto 4">
+                                <div class="project-overlay">
+                                    <h3>Dashboard</h3>
+                                    <p>Clique para visitar</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="https://www.github.com" target="_blank" class="project-link">
+                                <img src="https://via.placeholder.com/420x260?text=Projeto+5" alt="Projeto 5">
+                                <div class="project-overlay">
+                                    <h3>API REST</h3>
+                                    <p>Clique para visitar</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <button class="projects-btn next" aria-label="Próximo">&#10095;</button>
                 </div>
+                
                 <!-- <p class="projects-hint">Passe com o mouse ou arraste; clique nas setas para navegar.</p> -->
             </div>
         </div>
@@ -450,12 +486,25 @@
                 });
             });
 
-            // Open image on click
-            carousel.querySelectorAll('.project-card img').forEach(img => {
-                img.addEventListener('click', (e) => {
-                    // if user was dragging, ignore click
-                    if (carousel.classList.contains('dragging')) return;
-                    window.open(img.src, '_blank');
+            // Simplificando a lógica de clique vs. arraste
+            let moveCount = 0;
+            
+            carousel.addEventListener('pointerdown', () => {
+                moveCount = 0;
+            });
+
+            carousel.addEventListener('pointermove', () => {
+                moveCount++;
+            });
+
+            carousel.querySelectorAll('.project-card').forEach(card => {
+                const link = card.querySelector('.project-link');
+                
+                card.addEventListener('click', (e) => {
+                    // Se houve pouco movimento, considera como clique
+                    if (moveCount < 5 && link) {
+                        window.open(link.href, '_blank');
+                    }
                 });
             });
         });
