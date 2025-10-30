@@ -1,4 +1,3 @@
-
 .w-webflow-badge {
   display: none !important;
 }
@@ -48,6 +47,7 @@ div[style*="webflow"] {
 * {
   box-sizing: border-box;
 }
+
 
 body {
   margin: 0;
@@ -111,6 +111,7 @@ body {
   line-height: 1.6;
   margin-bottom: 30px;
 }
+  
 
 /* Formulário de contato responsivo */
 .section.contact {
@@ -1161,6 +1162,7 @@ textarea.form-input {
   background: rgb(29, 13, 166)!important;
 }
 
+
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 767px) {
   .navbar {
@@ -1246,6 +1248,7 @@ textarea.form-input {
   .prestador-card {
     padding: 40px;
   }
+  
 }
 
 /* ===== FOOTER ===== */
@@ -1307,146 +1310,31 @@ footer {
 }
 
 
-/* Footer Responsive */
-@media (min-width: 768px) {
-  .footer-content {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ===== ADDITIONAL RESPONSIVE IMPROVEMENTS ===== */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .prestador-card {
-    padding: 20px;
-  }
-  
-  .prestador-image i {
-    font-size: 3rem;
-  }
-  
-  .prestador-name {
-    font-size: 1.3rem;
-  }
-  
-  .prestador-role {
-    font-size: 1rem;
-  }
-  
-  .prestador-description {
-    font-size: 0.9rem;
-  }
-}
-
-/* ===== SMALL SCREENS (500px and below) ===== */
-@media (max-width: 500px) {
-  .hero-content-left {
-    text-align: center;
-  }
-  
-  .hero-title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero-position {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero-sub-title {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-desc-text {
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-  }
-  
-  .hero-content-flex {
-    text-align: center;
-  }
-  
-  .hero-details-wrap {
-    text-align: center;
-  }
-  
-  .hero-title-wrap {
-    text-align: center;
-  }
-  
-  .hero-sub-title-wrap {
-    text-align: center;
-  }
-  
-  /* Formulário responsivo para telas pequenas */
-  .contact-form {
-    padding: 60px 0;
-  }
-  
-  .h3.form-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  
-  .form {
-    padding: 25px;
-    margin: 0 15px;
-    border-radius: 15px;
-  }
-  
-  .input-wrapper {
-    gap: 20px;
-    margin-bottom: 25px;
-  }
-  
-  .form-input {
-    padding: 15px 18px;
-    font-size: 0.95rem;
-  }
-  
-  .form-btn {
-    padding: 15px 25px;
-    font-size: 1rem;
-  }
-}
-
-/* ===== VERY SMALL SCREENS (400px and below) ===== */
-@media (max-width: 400px) {
-  .hero-position {
-    margin-bottom: 10px;
-  }
-  
-  .hero-sub-title {
-    margin-bottom: 15px;
-  }
-  
-  .hero-desc-text {
-    margin-bottom: 20px;
-  }
-  
-  .hero-title {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero-position {
-    font-size: 0.9rem;
-  }
-  
-  .hero-sub-title {
-    font-size: 0.8rem;
-  }
-  
-  .hero-desc-text {
-    font-size: 0.85rem;
+@media (max-width: 420px) {
+    .logos {
+        grid-template-columns: 1fr;
     }
+}
+
+/* Grid para as logos - 2 por linha */
+.logos {
+    height: 495px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+    gap: 6px; /* espaço entre colunas/linhas */
+    align-items: center;
+    justify-items: center;
+    padding: 8px 0;
+    position: relative;
+    right: 15%;
+}
+
+/* Ajuste das imagens dentro do grid */
+.logos img {
+    height: -50px;
+    width: 340px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 270px; /* ajusta conforme necessário */
 }
