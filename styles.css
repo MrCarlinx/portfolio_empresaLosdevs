@@ -1331,7 +1331,7 @@ footer {
 
 /* Ajuste das imagens dentro do grid */
 .logos img {
-    height: -50px;
+    
     width: 340px;
     height: auto;
     display: block;
