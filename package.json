@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test.js",
+    "fix:frontmatter": "node tools/fix-astro-frontmatter.js"
+  }
+}
